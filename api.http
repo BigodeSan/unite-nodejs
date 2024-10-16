@@ -1,0 +1,31 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+  "title": 123,
+  "details": "null",
+  "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/90ccf5b5-40b4-452d-9e06-30a0aa858c73/attendees
+Content-Type: application/json
+
+{
+  "name": "Claudomiro Monteiro",
+  "email": "claudomiro@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/90ccf5b5-40b4-452d-9e06-30a0aa858c73
+
+###
+GET http://localhost:3333/attendees/1/badge
+
+###
+GET http://localhost:3333/attendees/1/check-in
+
+###
+GET http://localhost:3333/events/d6eb1626-e4f0-4813-8827-ba1d34745d3b/attendees?query=Claudomiro
